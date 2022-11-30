@@ -43,6 +43,7 @@ public class proves {
 
   - **Diagrama:**
   - **Resultat CC:**
+  - **Resultat proves camins:**
 
 4. Dibuixa el diagrama de flux representat per aquest codi, calcula la seva CC i crea una prova per a cada camí posible:
 
