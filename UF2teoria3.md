@@ -32,7 +32,7 @@ Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides
 
 | Edat | Classe vàlida coberta|
 | ----------- | ----------- |
-| 18 | 1 |
+| 40 | 1 |
 
 ##### Classes d'equivalència no vàlides:
 
@@ -40,6 +40,40 @@ Ara generarem proves per cobrir totes les calsses de proves no vàlides (2,3 i 4
 
 | Edat | Classe no vàlida coberta|
 | ----------- | ----------- |
-| 17 | 2 |
+| 15 | 2 |
 | 199 | 3 |
 | cinc | 4 |
+
+
+### Anàlisi dels valors límit:
+
+Per alguna raó que no està clara, els errors solen donar-se més vegades als límits del camp d'entrada que al centre.
+
+Per aquest motiu s'ha desenvolupat l'anàlisi dels valors límits com a tècnica de prova.
+
+D'aquesta manera seleccionarem casos de prova que provin els valors l'imits d'entrada del codi.
+
+**Aquestes proves són adicionals a la partició equivalent**
+
+Les proves d'anàlisi dels valors límits contemplen agafar els valors límits del rang de valors possibles, el valor immediatament inferior i el valor immediatament superior.
+
+| Paràmetre entrada | Regla a aplicar | Classes vàlides | Classes no vàlides |
+| ----------- | ----------- | ----------- | ----------- |
+| Edat | És un número? + rang valors (>=18) | 5. edat=18 <br> 6. edat=19 <br> 7. edat=119 <br> 8. edat=120  | 9. edat=17 <br> 10. edat=121|
+
+Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides (5 a 8).
+
+| Edat | Classe vàlida coberta|
+| ----------- | ----------- |
+| 18 | 5 |
+| 19 | 6 |
+| 119 | 7 |
+| 120| 8 |
+
+I els casos no vàlids (9 i 10):
+
+| Edat | Classe vàlida coberta|
+| ----------- | ----------- |
+| 17 | 9 |
+| 121 | 10 |
+
