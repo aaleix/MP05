@@ -18,31 +18,33 @@ Si un codi té més d'una entrada possible, per exemple dues variables, s'hauran
 
 Tenim una funció que rep l'edat d'una persona i retorna si pot entrar o no a la discoteca, anomenarem a aquesta funció **porterDiscoteca()**
 
+Si la persona pot passar la funció retornarà Passa, en cas  de no tenir l'edat necessària retornarà No Passa, si l'entrada de dades no és vàlida retornarà Error.
+
 ##### Classes d'equivalència:
 
 En aquest cas podem definir les classes d'equivalència del programa d'aquesta manera:
 
 | Paràmetre entrada | Regla a aplicar | Classes vàlides | Classes no vàlides |
 | ----------- | ----------- | ----------- | ----------- |
-| Edat | És un número? + rang valors (>=18) | 1. 18<=edat<=120 | 2. edat < 18 <br> 3. edat >120 <br> 4. no és un número.|
+| Edat | És un número? + rang valors (18..120) | 1. 18 <= edat <= 120 | 2. edat < 18 <br> 3. edat >120 <br> 4. no és un número.|
 
 ##### Classes d'equivalència vàlides:
 
 Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides (1).
 
-| Edat | Classe vàlida coberta|
-| ----------- | ----------- |
-| 40 | 1 |
+| Edat | Classe vàlida coberta| Resultat |
+| ----------- | ----------- | ----------- |
+| 40 | 1 | Passa |
 
 ##### Classes d'equivalència no vàlides:
 
 Ara generarem proves per cobrir totes les calsses de proves no vàlides (2,3 i 4).
 
-| Edat | Classe no vàlida coberta|
-| ----------- | ----------- |
-| 15 | 2 |
-| 199 | 3 |
-| cinc | 4 |
+| Edat | Classe no vàlida coberta| Resultat |
+| ----------- | ----------- | ----------- |
+| 15 | 2 | No Passa |
+| 199 | 3 | No Passa |
+| cinc | 4 | Error |
 
 
 ### Anàlisi dels valors límit:
@@ -59,21 +61,75 @@ Les proves d'anàlisi dels valors límits contemplen agafar els valors límits d
 
 | Paràmetre entrada | Regla a aplicar | Classes vàlides | Classes no vàlides |
 | ----------- | ----------- | ----------- | ----------- |
-| Edat | És un número? + rang valors (>=18) | 5. edat=18 <br> 6. edat=19 <br> 7. edat=119 <br> 8. edat=120  | 9. edat=17 <br> 10. edat=121|
+| Edat | És un número? + rang valors (18..120) | 5. edat=18 <br> 6. edat=19 <br> 7. edat=119 <br> 8. edat=120  | 9. edat=17 <br> 10. edat=121|
 
 Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides (5 a 8).
 
-| Edat | Classe vàlida coberta|
-| ----------- | ----------- |
-| 18 | 5 |
-| 19 | 6 |
-| 119 | 7 |
-| 120| 8 |
+| Edat | Classe vàlida coberta| Resultat |
+| ----------- | ----------- | ----------- |
+| 18 | 5 | Passa |
+| 19 | 6 | Passa |
+| 119 | 7 | Passa |
+| 120| 8 | Passa |
 
 I els casos no vàlids (9 i 10):
 
-| Edat | Classe vàlida coberta|
+| Edat | Classe vàlida coberta| Resultat |
+| ----------- | ----------- | ----------- |
+| 17 | 9 | No passa |
+| 121 | 10 | No passa |
+
+Amb aquestes tècniques provem totes les clàsses d'equivalència vàlides i no vàlides amb uns valors suficientment representatius de cada classe.
+
+Només amb aquestes proves no podem assegurar que el codi estigui lliure d'errors.
+
+## Exercici per fer a classe:
+
+Tens que provar un programa que rep dos valors diners i preu, els diners són els que insereix un usuari en una màquina de café i el preu és el preu del producte, com a màxim un usuari podrà introduir 50€.
+
+El programa tornarà -1 si els diners són més petits que el preu, en cas contrari tornaran la diferència entre els diners entrats i el preu del producte.
+
+**Per exemple:**
+- preu = 2
+- diners = 1
+- RETORNA = -1
+
+- preu = 2
+- diners = 3
+- RETORNA = 1
+
+**Calculeu la partició equivalent i valors per les classes d'equivalència vàlides i no vàlides:**
+
+### Classes d'equivalència:
+
+| Paràmetre entrada | Regla a aplicar | Classes vàlides | Classes no vàlides |
+| ----------- | ----------- | ----------- | ----------- |
+| diners | És un número? + rang valors (0..50) | 1. 0 <= diners <= 50 | 2. diners < 0 <br> 3. diners > 50 <br> 4. no és un número.|
+| preu | És un número? + rang valors (0--50) | 5. 0 < preu <= 50 | 6. preu < 0 <br> 7. preu > 50 <br> 8. no és un número.|
+
+
+
+### Classes d'equivalència vàlides (1 i 5):
+
+Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides (1).
+
+| diners | preu | Classe vàlida coberta|Resultat |
+| ----------- | ----------- | ----------- | ----------- |
+| 1 |  | 1 |
+
+##### Classes d'equivalència no vàlides:
+
+Ara generarem proves per cobrir totes les calsses de proves no vàlides (2,3 i 4).
+
+| Edat | Classe no vàlida coberta|
 | ----------- | ----------- |
-| 17 | 9 |
-| 121 | 10 |
+| 15 | 2 |
+| 199 | 3 |
+| cinc | 4 |
+
+
+
+
+
+
 
