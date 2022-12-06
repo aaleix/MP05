@@ -18,8 +18,28 @@ Si un codi té més d'una entrada possible, per exemple dues variables, s'hauran
 
 Tenim una funció que rep l'edat d'una persona i retorna si pot entrar o no a la discoteca, anomenarem a aquesta funció **porterDiscoteca()**
 
+##### Classes d'equivalència:
+
 En aquest cas podem definir les classes d'equivalència del programa d'aquesta manera:
 
 | Paràmetre entrada | Regla a aplicar | Classes vàlides | Classes no vàlides |
 | ----------- | ----------- | ----------- | ----------- |
 | Edat | És un número? + rang valors (>=18) | 1. 18<=edat<=120 | 2. edat < 18 <br> 3. edat >120 <br> 4. no és un número.|
+
+##### Classes d'equivalència vàlides:
+
+Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides (1).
+
+| Edat | Classe vàlida coberta|
+| ----------- | ----------- |
+| 18 | 1 |
+
+##### Classes d'equivalència no vàlides:
+
+Ara generarem proves per cobrir totes les calsses de proves no vàlides (2,3 i 4).
+
+| Edat | Classe no vàlida coberta|
+| ----------- | ----------- |
+| 17 | 2 |
+| 199 | 3 |
+| cinc | 4 |
