@@ -89,6 +89,8 @@ Tens que provar un programa que rep dos valors diners i preu, els diners són el
 
 El programa tornarà -1 si els diners són més petits que el preu, en cas contrari tornaran la diferència entre els diners entrats i el preu del producte. Si alguna de les entrades no és un número tornarà Error.
 
+El preu mínim per producte és de 10 cèntims.
+
 **Per exemple:**
 - preu = 2
 - diners = 1
@@ -100,15 +102,47 @@ El programa tornarà -1 si els diners són més petits que el preu, en cas contr
 
 **Calculeu la partició equivalent i valors per les classes d'equivalència vàlides i no vàlides:**
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 ### Classes d'equivalència:
 
 | Paràmetre entrada | Regla a aplicar | Classes vàlides | Classes no vàlides |
 | ----------- | ----------- | ----------- | ----------- |
 | diners | És un número? + rang valors (0..50) | 1. 0 <= diners <= 50 | 2. diners < 0 <br> 3. diners > 50 <br> 4. no és un número.|
-| preu | És un número? + rang valors (0--50) | 5. 0 < preu <= 50 | 6. preu < 0 <br> 7. preu > 50 <br> 8. no és un número.|
+| preu | És un número? + rang valors (0,1..50) | 5. 0,1 <= preu <= 50 | 6. preu < 0 <br> 7. preu > 50 <br> 8. no és un número.|
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 ### Classes d'equivalència vàlides (1 i 5):
 
 Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides (1).
@@ -117,10 +151,26 @@ Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides
 | ----------- | ----------- | ----------- | ----------- |
 | 10 | 11 | 1, 5 | -1 |
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-##### Classes d'equivalència no vàlides:
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Classes d'equivalència no vàlides:
 
-Ara generarem proves per cobrir totes les calsses de proves no vàlides (2,3 i 4).
+Ara generarem proves per cobrir totes les calsses de proves no vàlides (2 a 4 i 6 a 8).
 
 
 | diners | preu | Classe vàlida coberta| Resultat |
@@ -133,7 +183,86 @@ Ara generarem proves per cobrir totes les calsses de proves no vàlides (2,3 i 4
 | 10 | sis | 8 | Error |
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Anàlisi dels valors límits:
+
+| Paràmetre entrada | Regla a aplicar | Classes vàlides | Classes no vàlides |
+| ----------- | ----------- | ----------- | ----------- |
+| diners | És un número? + rang valors (0..50) | 9. diners = 0<br> 10. diners = 1<br> 11. diners = 50<br> 12. diners = 49 | 13. diners = -1 <br> 14. diners = 51 |
+| preu | És un número? + rang valors (0,1..50) | 15. preu = 0,1<br> 16. preu = 1<br> 17. preu = 50<br> 18. preu = 49| 19. preu = -1<br> 20. preu = 51 |
+
+Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides (9 a 12 i 15 a 18).
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+| diners | preu | Classe vàlida coberta| Resultat |
+| ----------- | ----------- | ----------- | ----------- |
+| 0 | 5 | 9 | -1 |
+| 1 | 5 | 10 | -1 |
+| 50 | 5 | 11 | 45 |
+| 49 | 5 | 12 | 44 |
+| 10 | 0,1 | 15 | 9,90 |
+| 10 | 1 | 16 | 9 |
+| 10 | 50 | 17 | -1 |
+| 10 | 49 | 18 | -1 |
 
 
 
+I els casos no vàlids (13, 14, 19 i 20):
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+| diners | preu | Classe vàlida coberta| Resultat |
+| ----------- | ----------- | ----------- | ----------- |
+| -1 | 5 | 13 | -1 |
+| 51 | 5 | 14 | -1 |
+| 5 | -1 | 19 | -1 |
+| 5 | 51 | 20 | -1 |
