@@ -87,7 +87,7 @@ Només amb aquestes proves no podem assegurar que el codi estigui lliure d'error
 
 Tens que provar un programa que rep dos valors diners i preu, els diners són els que insereix un usuari en una màquina de café i el preu és el preu del producte, com a màxim un usuari podrà introduir 50€.
 
-El programa tornarà -1 si els diners són més petits que el preu, en cas contrari tornaran la diferència entre els diners entrats i el preu del producte.
+El programa tornarà -1 si els diners són més petits que el preu, en cas contrari tornaran la diferència entre els diners entrats i el preu del producte. Si alguna de les entrades no és un número tornarà Error.
 
 **Per exemple:**
 - preu = 2
@@ -113,20 +113,24 @@ El programa tornarà -1 si els diners són més petits que el preu, en cas contr
 
 Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides (1).
 
-| diners | preu | Classe vàlida coberta|Resultat |
+| diners | preu | Classe vàlida coberta| Resultat |
 | ----------- | ----------- | ----------- | ----------- |
-| 1 |  | 1 |
+| 10 | 11 | 1, 5 | -1 |
+
 
 ##### Classes d'equivalència no vàlides:
 
 Ara generarem proves per cobrir totes les calsses de proves no vàlides (2,3 i 4).
 
-| Edat | Classe no vàlida coberta|
-| ----------- | ----------- |
-| 15 | 2 |
-| 199 | 3 |
-| cinc | 4 |
 
+| diners | preu | Classe vàlida coberta| Resultat |
+| ----------- | ----------- | ----------- | ----------- |
+| -10 | 11 | 2 | -1 |
+| 60 | 2 | 3 | -1 |
+| cinquanta | 4 | 3 | Error |
+| 10 | -1 | 6 | -1 |
+| 10 | 100 | 7 | -1 |
+| 10 | sis | 8 | Error |
 
 
 
