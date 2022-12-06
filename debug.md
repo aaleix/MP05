@@ -1,5 +1,13 @@
 # Depurador:
 
+## Historia:
+
+La utilització del terme "bug" com a error informàtic es va començar a emprar l'any 1947, llavors un bug era realment "un insecte" que feiz que funcionés malament un programa informàtic.
+
+![image](https://user-images.githubusercontent.com/110727546/206031058-14a92197-8529-4f93-9f66-df61e4c81a6c.png)
+
+## Què és?:
+
 El depurador, debugger o debug és una part del IDE que ens serveix per depurar el codi, deixant-nos executar el programa de forma controlada.
 
 Per això ens deixa crear punts d'interrupció que pararan l'execució del programa i ens deixaran inspeccionar l'estat de les variables en aquell moment.
@@ -51,7 +59,6 @@ public class averageFinder {
 ![image](https://user-images.githubusercontent.com/110727546/206021220-5973f0ab-d103-4b60-85b7-3bfffa06c7c8.png)
 
 ![image](https://user-images.githubusercontent.com/110727546/206021422-5fb8fd1f-622d-4d00-8965-cdba34493628.png)
-
 
 
 
