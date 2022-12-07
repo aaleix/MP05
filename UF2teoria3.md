@@ -119,6 +119,7 @@ El preu mínim per producte és de 10 cèntims.
 <br>
 <br>
 <br>
+
 ### Classes d'equivalència:
 
 | Paràmetre entrada | Regla a aplicar | Classes vàlides | Classes no vàlides |
