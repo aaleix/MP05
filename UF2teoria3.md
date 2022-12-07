@@ -87,7 +87,7 @@ Només amb aquestes proves no podem assegurar que el codi estigui lliure d'error
 
 Tens que provar un programa que rep dos valors diners i preu, els diners són els que insereix un usuari en una màquina de café i el preu és el preu del producte, com a màxim un usuari podrà introduir 50€.
 
-El programa tornarà -1 si els diners són més petits que el preu, en cas contrari tornaran la diferència entre els diners entrats i el preu del producte. Si alguna de les entrades no és un número tornarà Error.
+El programa tornarà -1 si els diners són més petits que el preu o si el preu és més petit que 0,10. En cas contrari tornaran la diferència entre els diners entrats i el preu del producte. Si alguna de les entrades no és un número tornarà Error.
 
 El preu mínim per producte és de 10 cèntims.
 
@@ -150,7 +150,7 @@ Ara haurem de dissenyar els casos de prova per cobrir totes les classes vàlides
 
 | diners | preu | Classe vàlida coberta| Resultat |
 | ----------- | ----------- | ----------- | ----------- |
-| 10 | 11 | 1, 5 | -1 |
+| 10 | 9 | 1, 5 | 1 |
 
 <br>
 <br>
