@@ -23,10 +23,12 @@
 ### Teoria:
 
 - [Introducció](UF2teoria1.md)
-- [Tipus de proves](UF2teoria2.md)
-- 
+- [Tipus de proves i proves de caixa blanca](UF2teoria2.md)
+- [Proves de caixa negra](UF2teoria3.md)
+- [Depurador](debug.md)
+
 
 ### Activitats:
 
 - [Proves de caixa blanca](UF2Activitats1.md)
-
+- [Proves de caixa negra i depurador](UF2Activitats2.md)
